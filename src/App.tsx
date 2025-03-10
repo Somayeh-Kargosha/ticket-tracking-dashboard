@@ -119,12 +119,15 @@ const App: React.FC = () => {
         setTimeframe={setSelectedTimeframe}
       />
       <div className="cards">
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
+        {timeframes.map((item) => (
+          <ActivityCard
+            key={item.title}
+            title={item.title}
+            current={item.timeframes[selectedTimeframe].current}
+            previous={item.timeframes[selectedTimeframe].previous}
+            timeframe={selectedTimeframe}
+          />
+        ))}
       </div>
     </div>
   );
