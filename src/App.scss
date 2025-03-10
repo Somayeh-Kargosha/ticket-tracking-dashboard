@@ -14,3 +14,13 @@
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1.3rem;
 }
+
+@media (max-width: 877px) {
+  .dashboard {
+    grid-template-columns: 20rem;
+  }
+  .cards {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}

@@ -92,3 +92,21 @@
     }
   }
 }
+
+@media (max-width: 877px) {
+  .activity-card-container {
+    height: 9.6rem;
+    .activity-card {
+      height: 7.5rem;
+    }
+  }
+  .activity-done {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem !important;
+    .hidden {
+      display: none;
+    }
+  }
+}

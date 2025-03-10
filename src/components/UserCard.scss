@@ -63,3 +63,26 @@
     }
   }
 }
+
+@media (max-width: 877px) {
+  .user-card-container {
+    width: 100%;
+    .user-card {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      p {
+        padding: 0 !important ;
+      }
+      .user-title {
+        display: flex;
+      }
+    }
+    .btn-container {
+      display: flex !important;
+      justify-content: space-between;
+      margin-top: 0.8rem !important;
+      margin-bottom: 0.8rem;
+    }
+  }
+}
