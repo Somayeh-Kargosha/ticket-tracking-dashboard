@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# Personal Ticket Tracking Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal ticket-tracking dashboard built with React and TypeScript. The dashboard displays statistics on various activities such as job, fun, sport, and others, allowing users to switch between daily, weekly, and monthly views.
 
-Currently, two official plugins are available:
+## How to Start the App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with the app, follow the steps below:
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+   git clone https://github.com/Somayeh-Kargosha/ticket-tracking-dashboard.git
+   cd ticket-tracking-dashboard
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Install dependencies:**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   Make sure you have Node.js installed. Then, run the following command to install the required dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   npm install
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. **Run the app:**
+
+   Start the development server:
+
+   npm run dev
+
+## What Was the Most Difficult Part of This Challenge?
+
+The most difficult part of this challenge was getting the grid layout to work as expected. Achieving the correct alignment, spacing, and making sure the components were styled correctly for different viewports was quite challenging.
+
+## What Was the Easiest Part of This Challenge?
+
+The easiest part of this challenge was implementing the functionality of switching between different timeframes (daily, weekly, and monthly) and displaying the appropriate data in the ActivityCard component.
