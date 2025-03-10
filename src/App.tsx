@@ -120,6 +120,11 @@ const App: React.FC = () => {
       />
       <div className="cards">
         <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
       </div>
     </div>
   );

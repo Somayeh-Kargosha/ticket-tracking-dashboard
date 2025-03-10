@@ -1,0 +1,94 @@
+.activity-card-container {
+  display: grid;
+  position: relative;
+  height: 210px;
+  border-radius: 15px;
+  overflow: hidden;
+  .icon-container {
+    height: 60px;
+    border-radius: 15px;
+    .icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      justify-self: end;
+      position: absolute;
+      top: -5px;
+      right: 15px;
+    }
+
+    &.job {
+      background-color: var(--job-color);
+    }
+    &.fun {
+      background-color: var(--fun-color);
+    }
+    &.learning {
+      background-color: var(--learning-color);
+    }
+    &.sport {
+      background-color: var(--sport-color);
+    }
+    &.emails {
+      background-color: var(--emails-color);
+    }
+    &.health {
+      background-color: var(--health-color);
+    }
+  }
+}
+
+.activity-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: 15px;
+  color: var(--text-primary);
+  height: 170px;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  &:hover {
+    background-color: var(--light-blue);
+  }
+
+  .activity-content {
+    .activity-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      img {
+        width: 1rem;
+      }
+    }
+    .activity-done {
+      padding: 1.2rem 0 0.6rem 0;
+
+      .hours {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 2.5rem;
+          font-weight: 300;
+        }
+        p {
+          font-size: 1.1rem;
+          font-weight: 100;
+          padding: 0 0.5rem;
+        }
+      }
+
+      .previous {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        .hidden {
+          padding-left: 0.2rem;
+        }
+      }
+    }
+  }
+}
