@@ -1,7 +1,15 @@
 import React from "react";
 import "./UserCard.scss";
 
-const UserCard: React.FC = () => {
+interface UserCardProps {
+  setTimeframe: (timeframe: "daily" | "weekly" | "monthly") => void;
+  selectedTimeframe: "daily" | "weekly" | "monthly";
+}
+
+const UserCard: React.FC<UserCardProps> = ({
+  setTimeframe,
+  selectedTimeframe,
+}) => {
   return (
     <div className="user-card-container">
       <div className="user-card">
@@ -23,7 +31,13 @@ const UserCard: React.FC = () => {
       <div className="timeframe-options">
         <div className="btn-container">
           {["daily", "weekly", "monthly"].map((tf) => (
-            <button key={tf}>{tf}</button>
+            <button
+              key={tf}
+              className={selectedTimeframe === tf ? "active" : ""}
+              onClick={() => setTimeframe(tf as "daily" | "weekly" | "monthly")}
+            >
+              {tf}
+            </button>
           ))}
         </div>
       </div>

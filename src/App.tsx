@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.scss";
 import ActivityCard from "./components/ActivityCard";
 import UserCard from "./components/UserCard";
@@ -108,9 +109,15 @@ const timeframes = [
 ];
 
 const App: React.FC = () => {
+  const [selectedTimeframe, setSelectedTimeframe] = useState<
+    "daily" | "weekly" | "monthly"
+  >("weekly");
   return (
     <div className="dashboard">
-      <UserCard />
+      <UserCard
+        selectedTimeframe={selectedTimeframe}
+        setTimeframe={setSelectedTimeframe}
+      />
       <div className="cards">
         <ActivityCard />
       </div>
