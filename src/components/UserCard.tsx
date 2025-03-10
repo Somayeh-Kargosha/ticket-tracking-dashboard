@@ -1,3 +1,20 @@
+/**
+ * UserCard Component - Displays a user profile with an avatar, name, and a set of buttons to change the timeframe.
+ * Allows users to switch between daily, weekly, and monthly timeframes.
+ *
+ * @component
+ * @example
+ * // Example usage of UserCard
+ * <UserCard setTimeframe={setTimeframeFunction} selectedTimeframe="daily" />
+ *
+ * @param {Object} props - The props for the component.
+ * @param {Function} props.setTimeframe - A function to set the selected timeframe.
+ *    It expects a value of either "daily", "weekly", or "monthly".
+ * @param {"daily" | "weekly" | "monthly"} props.selectedTimeframe - The current selected timeframe that should be reflected in the UI.
+ *
+ * @returns {JSX.Element} The rendered UserCard component.
+ */
+
 import React from "react";
 import "./UserCard.scss";
 

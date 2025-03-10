@@ -1,8 +1,22 @@
+/**
+ * App Component - Displays the dashboard with user stats and a set of timeframes.
+ * It uses the UserCard component to select the timeframe (daily, weekly, monthly)
+ * and renders ActivityCard components that display the stats for each timeframe.
+ *
+ * @component
+ * @example
+ * // Example usage of App component
+ * <App />
+ *
+ * @returns {JSX.Element} The rendered App component.
+ */
+
 import { useState } from "react";
 import "./App.scss";
 import ActivityCard from "./components/ActivityCard";
 import UserCard from "./components/UserCard";
 
+// The timeframes data that contains stats for different activities (job, fun, learning, etc.)
 const timeframes = [
   {
     title: "job",

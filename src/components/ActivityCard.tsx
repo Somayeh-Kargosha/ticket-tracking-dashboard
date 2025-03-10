@@ -1,3 +1,22 @@
+/**
+ * ActivityCard Component - Displays a single activity's stats, such as the current and previous time spent
+ * on the activity, along with an icon and a title. Allows users to compare current activity with previous periods
+ * based on the selected timeframe (daily, weekly, or monthly).
+ *
+ * @component
+ * @example
+ * // Example usage of ActivityCard
+ * <ActivityCard title="job" current={10} previous={8} timeframe="weekly" />
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The title of the activity (e.g., "job", "fun", "learning").
+ * @param {number} props.current - The current time spent on the activity (e.g., "current" hours).
+ * @param {number} props.previous - The previous time spent on the activity (e.g., "previous" hours).
+ * @param {"daily" | "weekly" | "monthly"} props.timeframe - The selected timeframe for comparison (one of: "daily", "weekly", "monthly").
+ *
+ * @returns {JSX.Element} The rendered ActivityCard component.
+ */
+
 import React from "react";
 import "./ActivityCard.scss";
 interface ActivityCardProps {
